@@ -7,7 +7,7 @@ export default function RegionNameBtn({ 지역명 }) {
 
   return (
     <li>
-      <Link href={`/region/${지역명.slug}`}>
+      <Link className="flex items-center justify-center px-2 py-1 border rounded" href={`/region/${지역명.slug}`}>
           <h2>{지역명.name}</h2>
       </Link>
     </li>

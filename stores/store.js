@@ -21,7 +21,7 @@ export const useStore = create((set) => ({
     센터상세페이지열기 : (value) => set((state)=>({센터상세페이지오픈상태 : true})),
     센터상세페이지닫기 : (value) => set((state)=>({센터상세페이지오픈상태 : false})),
 
-    센터상세데이터 : {},
+    센터상세데이터 : [],
     센터상세데이터_변경 : (value) => set((state)=>({센터상세데이터 : value})),
 
 }));

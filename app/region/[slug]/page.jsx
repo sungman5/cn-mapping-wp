@@ -7,8 +7,8 @@ export default async function RegionClass(props) {
   
   return (
     <div>
-      <h1>센터목록</h1>
-      <ul className="text-sm">
+      <h1 className="flex items-center justify-between mb-2 text-lg font-bold font-Pretendard"><p>시설 목록</p>&nbsp;<span className="text-sm font-normal text-applegray">총&nbsp;{지역별센터목록.length}개</span></h1>
+      <ul className="">
         {지역별센터목록.map((센터) => {
           return (
             <RegionCenterElement key={센터.id} 센터={센터}/>
