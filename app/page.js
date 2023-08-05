@@ -1,5 +1,6 @@
 'use client'
 
+import { useStore } from '@/stores/store'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -10,11 +11,15 @@ export default function Home() {
     setNumber(number + 1)
   }
 
+  const { zustandNumber, increment, decrement, reset } = useStore();
+
 
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
+    <main className="">
       {number}
       <button onClick={handleClick}>Click me</button>
+      <p>zustand number : {zustandNumber}</p>
+      <button onClick={increment}>Increment</button>
     </main>
   )
 }
