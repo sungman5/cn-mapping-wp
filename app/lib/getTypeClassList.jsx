@@ -1,6 +1,6 @@
 export default async function GetTypeClassList(slug) {
   const 응답 = await fetch(
-    `http://cn-mapping-wp.local/wp-json/custom/v1/center/${slug}`
+    `http://cnmapping.cafe24.com/wp-json/custom/v1/center/${slug}`
     );
 
   if (!응답.ok) {
