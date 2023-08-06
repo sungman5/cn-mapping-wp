@@ -8,7 +8,7 @@ export default function ProgramNavBtn() {
   console.log(프로그램창오픈상태);
   return (
     <li
-      className="flex flex-col items-center justify-center w-20 gap-1 text-center cursor-pointer"
+      className="flex flex-col items-center justify-center w-20 gap-1 py-1 text-center rounded cursor-pointer hover:text-primary hover:bg-hoverbg"
       onClick={() => {
         프로그램창오픈상태_변경();
       }}

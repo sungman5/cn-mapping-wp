@@ -6,6 +6,7 @@ import GetAllPrograms from "./lib/getAllPrograms";
 import Nav from "./components/nav";
 import CenterDetail from "./components/centerDetail";
 import Header from "./components/header";
+import CnMap from "./components/mapping";
 
 export const metadata = {
   title: "디디다: 충청남도 청소년 시설 자원 맵",
@@ -15,15 +16,17 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const 프로그램목록 = await GetAllPrograms();
   return (
-    <html className="h-screen">
-      <body className="h-screen font-NanumSquareRound">
+    <html>
+      <body className="h-screen overflow-hidden font-NanumSquareRound">
         <Header />
         <section className="flex">
           <Nav />
-          <main className="p-8 bg-white border-r w-80">{children}</main>
+          <main className="p-6 bg-white border-r w-80">{children}</main>
           <CenterDetail />
           <Programs 프로그램목록={프로그램목록} />
-          <div className="bg-green-300">여기가 지도이미지</div>
+          <div className="flex items-center justify-center flex-1 h-[calc(100vh-6rem)] p-8 bg-gradient-to-t to-[#C9FFFC] from-[#8BC0D8]">
+            <CnMap />
+          </div>
         </section>
       </body>
     </html>

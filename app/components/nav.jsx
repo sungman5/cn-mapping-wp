@@ -14,7 +14,7 @@ export default function Nav() {
 
   return (
     <nav className="h-screen p-8 bg-white border-r border-stone-300">
-      <ul className="flex flex-col gap-8">
+      <ul className="flex flex-col gap-6">
         <li className={`flex flex-col items-center justify-center w-20 gap-1 py-1 text-center rounded hover:text-primary hover:bg-hoverbg`}>
           <Link
             onClick={() => {
@@ -22,7 +22,7 @@ export default function Nav() {
             }}
             href={"/all-center-list"}
           >
-            <Image src={"/cn-nav-main.svg"} width={48} height={48} alt="전체보기 아이콘" />
+            <Image src={"/cn-nav-main.svg"} className="inline-block" width={48} height={48} alt="전체보기 아이콘" />
             <p>전체보기</p>
           </Link>
         </li>
