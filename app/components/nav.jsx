@@ -9,8 +9,6 @@ import { usePathname } from "next/navigation";
 export default function Nav() {
   const { 센터상세페이지닫기 } = useStore();
   const pathname = usePathname();
-  
-  console.log(pathname)
 
   return (
     <nav className="h-screen p-8 bg-white border-r border-stone-300">

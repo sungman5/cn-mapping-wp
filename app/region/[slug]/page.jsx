@@ -3,7 +3,6 @@ import GetRegionCenterList from "@/app/lib/getRegionCenterList";
 
 export default async function RegionClass(props) {
   const 지역별센터목록 = await GetRegionCenterList(props.params.slug);
-  console.log("센터목록", 지역별센터목록);
 
   return (
     <div>

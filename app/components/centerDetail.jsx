@@ -11,13 +11,10 @@ export default function CenterDetail() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await GetMetaData(센터아이디);
-      console.log("레스레스", res);
       센터상세데이터_변경(res);
     };
     fetchData();
   }, [센터상세데이터_변경, 센터아이디]);
-
-  console.log("으이?", typeof 센터상세데이터);
 
   return (
     <section className={`${센터상세페이지오픈상태 === false ? "hidden" : "block"} font-NanumSquareRound drop-shadow-sm flex flex-col gap-8 p-6 w-80 border-r`}>

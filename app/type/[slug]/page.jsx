@@ -3,7 +3,6 @@ import GetTypeClassList from "@/app/lib/getTypeClassList";
 
 export default async function TypeClass(props) {
   const 유형별센터목록 = await GetTypeClassList(props.params.slug);
-  console.log("센터목록", 유형별센터목록);
 
   return (
     <div>
