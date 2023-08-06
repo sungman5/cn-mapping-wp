@@ -1,6 +1,6 @@
 export default async function 모든센터목록불러오기() {
   const 응답 = await fetch(
-    "http://cnmapping.cafe24.com/wp-json/custom/v1/all-center-posts"
+    "https://cnmapping.cafe24.com/wp-json/custom/v1/all-center-posts"
   );
 
   if (!응답.ok) {
