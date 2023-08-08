@@ -7,7 +7,7 @@ export default function ProgramNavBtn() {
   const { 프로그램창오픈상태, 프로그램창오픈상태_변경 } = useStore();
   return (
     <li
-      className="flex flex-col items-center justify-center w-20 gap-1 py-1 text-center rounded cursor-pointer hover:text-primary hover:bg-hoverbg"
+      className={`flex flex-col items-center justify-center w-20 gap-1 py-1 text-center rounded cursor-pointer hover:text-primary hover:bg-hoverbg ${프로그램창오픈상태 === true ? 'bg-hoverbg text-primary' : ''}}`}
       onClick={() => {
         프로그램창오픈상태_변경();
       }}
