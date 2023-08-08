@@ -47,16 +47,12 @@ export const useStore = create((set) => ({
 
   선택된지역: "",
   지역선택: (value) => {
-    // gsap.to(`#star-${value}`, {
-    //   autoAlpha: 1,
-    //   duration: 0.5,
-    //   scale: 1,
-    //   transformOrigin: "50% 100%",
-    //   ease: "back.out(1.7)",
-    //   onComplete: () => {
-    //     set((state) => ({ 선택된지역: value }));
-    //   },
-    // });
     set((state) => ({ 선택된지역: value }));
   },
+
+
+  //program page.jsx 프로그램 상세 모달창 상태
+  모달창오픈상태 : false,
+  모달창열기 : (value) => set((state) => ({ 모달창오픈상태: true })),
+  모달창닫기 : (value) => set((state) => ({ 모달창오픈상태: false })),
 }));
