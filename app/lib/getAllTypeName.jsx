@@ -1,6 +1,6 @@
 export default async function GetAllTypeName() {
     const 응답 = await fetch(
-      "http://cn-mapping-wp.local/wp-json/custom/v1/center-type-terms"
+      "https://cnmapping.cafe24.com/wp-json/custom/v1/center-type-terms"
     );
   
     if (!응답.ok) {

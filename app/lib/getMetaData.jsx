@@ -1,6 +1,6 @@
 export default async function GetMetaData(id) {
   const 응답 = await fetch(
-    `http://cn-mapping-wp.local/wp-json/custom/v1/center_meta/${id}`
+    `https://cnmapping.cafe24.com/wp-json/custom/v1/center_meta/${id}`
   );
 
   if (!응답.ok) {
