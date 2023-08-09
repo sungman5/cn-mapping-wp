@@ -7,7 +7,6 @@ import Nav from "./components/nav";
 import CenterDetail from "./components/centerDetail";
 import Header from "./components/header";
 import CnMap from "./components/mapping";
-import CnSun from "./components/sun";
 
 export const metadata = {
   title: "디디다: 충청남도 청소년 시설 자원 맵",
