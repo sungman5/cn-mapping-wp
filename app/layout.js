@@ -55,7 +55,6 @@ export default async function RootLayout({ children }) {
                 </p>
               </Link>
             </div>
-            <CnSun />
             <CnMap />
           </div>
         </section>
