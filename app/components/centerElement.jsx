@@ -9,7 +9,6 @@ export default function CenterElement({ 센터 }) {
     센터아이디_변경(센터.id);
     센터상세페이지열기();
     지역선택(센터.region_slug);
-    console.log('in CenterElement.jsx', 센터)
   };
 
   return (

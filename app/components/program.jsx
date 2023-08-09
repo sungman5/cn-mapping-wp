@@ -4,9 +4,6 @@ import Image from "next/image";
 export default function Program({ 프로그램 }) {
   const { 모달창열기, 모달창오픈상태, 모달창닫기, 프로그램선택 } = useStore();
 
-  console.log("프로그램데이터", 프로그램);
-  console.log("프로그램데이터222", typeof 프로그램);
-
   return (
     <>
       <li

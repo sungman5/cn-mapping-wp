@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export default function ProgramModal({ 프로그램 }) {
   const { 모달창오픈상태, 모달창닫기 } = useStore();
-  console.log("모달모달", 프로그램);
   return (
     <div id="program-modal-dimmed" className={`${모달창오픈상태 === false ? "hidden" : "flex"} fixed inset-0 items-center justify-center shadow-md bg-black/50`}>
       <div id="program-modal-frame" className="flex flex-col justify-between w-10/12 px-4 py-6 bg-white rounded-md lg:p-8 lg:max-w-3xl lg:h-4/5">
