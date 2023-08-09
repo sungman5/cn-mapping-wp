@@ -14,7 +14,9 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
+
   const 프로그램목록 = await GetAllPrograms();
+
   return (
     <html>
       <body className="h-screen overflow-hidden font-NanumSquareRound">

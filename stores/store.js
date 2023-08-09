@@ -55,4 +55,7 @@ export const useStore = create((set) => ({
   모달창오픈상태 : false,
   모달창열기 : (value) => set((state) => ({ 모달창오픈상태: true })),
   모달창닫기 : (value) => set((state) => ({ 모달창오픈상태: false })),
+
+  선택된프로그램 : null,
+  프로그램선택 : (value) => set((state) => ({ 선택된프로그램: value })),
 }));
