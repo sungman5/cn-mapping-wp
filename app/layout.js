@@ -23,9 +23,9 @@ export default async function RootLayout({ children }) {
         <section className="flex">
           <Nav />
           <main className="p-6 bg-white border-r w-80">{children}</main>
-          <CenterDetail />
+          <CenterDetail 프로그램목록={프로그램목록} />
           <Programs 프로그램목록={프로그램목록} />
-          <div className="flex items-center justify-center flex-1 h-[calc(100vh-6rem)] p-8 bg-gradient-to-t to-[#C9FFFC] from-[#8BC0D8] relative">
+          <div className="flex items-center justify-center flex-1 h-[calc(100vh-6rem)] p-8 bg-white relative">
             <div className="absolute flex gap-2 bottom-8 left-8">
               <div className="flex gap-4 px-6 py-4 bg-white rounded-full shadow-sm ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -40,7 +40,7 @@ export default async function RootLayout({ children }) {
                   2,126,374명 <span className="text-sm text-applegray">&#40;2023년 6월 기준&#41;</span>
                 </p>
               </div>
-              <Link href={'/all-center-list'} className="flex gap-4 px-6 py-4 bg-white rounded-full shadow-sm">
+              <Link href={"/all-center-list"} className="flex gap-4 px-6 py-4 bg-white rounded-full shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path
                     strokeLinecap="round"
@@ -49,9 +49,7 @@ export default async function RootLayout({ children }) {
                   />
                 </svg>
                 <h1 className="text-xl font-bold font-Pretendard text-primary">청소년 시설 수</h1>
-                <p className="text-xl">
-                  44개소
-                </p>
+                <p className="text-xl">44개소</p>
               </Link>
             </div>
             <CnMap />

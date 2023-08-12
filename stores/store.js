@@ -15,6 +15,7 @@ export const useStore = create((set) => ({
   //프로그램 여닫기
   프로그램창오픈상태: false,
   프로그램창오픈상태_변경: (value) => set((state) => ({ 프로그램창오픈상태: !state.프로그램창오픈상태 })),
+  프로그램닫기: (value) => set((state) => ({ 프로그램창오픈상태: false })),
 
   //센터 상세페이지 여닫기
   센터상세페이지오픈상태: false,

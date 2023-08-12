@@ -1,9 +1,10 @@
 import { useStore } from "@/stores/store";
 import Image from "next/image";
 
-export default function Program({ 프로그램 }) {
-  const { 모달창열기, 모달창오픈상태, 모달창닫기, 프로그램선택 } = useStore();
+export default function Program({프로그램}) {
+  const { 모달창열기, 프로그램선택 } = useStore();
 
+  
   return (
     <>
       <li

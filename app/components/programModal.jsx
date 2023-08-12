@@ -2,14 +2,16 @@ import { useStore } from "@/stores/store";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProgramModal({ 프로그램 }) {
-  const { 모달창오픈상태, 모달창닫기 } = useStore();
+export default function ProgramModal() {
+  const { 모달창오픈상태, 모달창닫기, 선택된프로그램 } = useStore();
+  console.log('프로그램모달', 선택된프로그램)
   return (
     <div id="program-modal-dimmed" className={`${모달창오픈상태 === false ? "hidden" : "flex"} z-50 fixed inset-0 items-center justify-center shadow-md bg-black/50`}>
       <div id="program-modal-frame" className="flex flex-col justify-between w-10/12 px-4 py-6 bg-white rounded-md lg:p-8 lg:max-w-3xl lg:h-4/5">
         <div>
           <header className="mb-6">
-            <h4 className="text-3xl font-bold font-Pretendard">{프로그램.program_title}</h4>
+            {/* <h4 className="text-3xl font-bold font-Pretendard">{프로그램.program_title}</h4> */}
+            <h4 className="text-3xl font-bold font-Pretendard">{선택된프로그램.program_title}</h4>
           </header>
           <div id="program-modal-body" className="mb-8">
             <div className="flex gap-6 mb-6">
@@ -17,33 +19,33 @@ export default function ProgramModal({ 프로그램 }) {
               <div className="flex flex-col gap-6">
                 <div>
                   <h5 className="mb-1 text-lg font-bold font-Pretendard">주관</h5>
-                  <p>{프로그램.center_info.center_title}</p>
+                  <p>{선택된프로그램.center_info.center_title}</p>
                 </div>
                 <div>
                   <h5 className="mb-1 text-lg font-bold font-Pretendard">대상</h5>
-                  <p>{프로그램.program_metadata.program_target}</p>
+                  <p>{선택된프로그램.program_metadata.program_target}</p>
                 </div>
                 <div>
                   <h5 className="mb-1 text-lg font-bold font-Pretendard">접수기간</h5>
-                  <p>{프로그램.program_metadata.program_regist_start}부터</p>
-                  <p>{프로그램.program_metadata.program_regist_end}까지</p>
+                  <p>{선택된프로그램.program_metadata.program_regist_start}부터</p>
+                  <p>{선택된프로그램.program_metadata.program_regist_end}까지</p>
                 </div>
                 <div>
                   <h5 className="mb-1 text-lg font-bold font-Pretendard">문의처</h5>
-                  <p>{프로그램.center_info.center_email}</p>
-                  <p>{프로그램.center_info.center_tel}</p>
+                  <p>{선택된프로그램.center_info.center_email}</p>
+                  <p>{선택된프로그램.center_info.center_tel}</p>
                 </div>
               </div>
             </div>
             <div>
               <h5 className="mb-1 text-lg font-bold font-Pretendard">소개</h5>
-              <p>{프로그램.program_content}</p>
+              <p>{선택된프로그램.program_content}</p>
             </div>
           </div>
         </div>
         <footer className="flex justify-center gap-1">
           <Link
-            href={프로그램.program_metadata.program_direct_link}
+            href={선택된프로그램.program_metadata.program_direct_link}
             target="_blank"
             className="flex items-center gap-1 px-6 py-1 border rounded-md hover:bg-amber-400 bg-amber-300"
           >
