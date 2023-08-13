@@ -7,7 +7,7 @@ export default function ProgramModal() {
   console.log('프로그램모달', 선택된프로그램)
   return (
     <div id="program-modal-dimmed" className={`${모달창오픈상태 === false ? "hidden" : "flex"} z-50 fixed inset-0 items-center justify-center shadow-md bg-black/50`}>
-      <div id="program-modal-frame" className="flex flex-col justify-between w-10/12 px-4 py-6 bg-white rounded-md lg:p-8 lg:max-w-3xl lg:h-4/5">
+      <div id="program-modal-frame" className="flex flex-col justify-between w-10/12 px-4 py-6 bg-white rounded-md xl:p-8 xl:max-w-3xl xl:h-4/5">
         <div>
           <header className="mb-6">
             {/* <h4 className="text-3xl font-bold font-Pretendard">{프로그램.program_title}</h4> */}

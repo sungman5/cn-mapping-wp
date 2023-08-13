@@ -2,11 +2,6 @@ import { create } from "zustand";
 import { gsap } from "gsap";
 
 export const useStore = create((set) => ({
-  // test 항목임
-  zustandNumber: 0,
-  increment: () => set((state) => ({ zustandNumber: state.zustandNumber + 1 })),
-  decrement: () => set((state) => ({ zustandNumber: state.zustandNumber - 1 })),
-  reset: () => set({ zustandNumber: 0 }),
 
   // 실제 데이터
   센터아이디: 0,
@@ -20,22 +15,39 @@ export const useStore = create((set) => ({
   //센터 상세페이지 여닫기
   센터상세페이지오픈상태: false,
   센터상세페이지오픈상태_변경: (value) => set((state) => ({ 센터상세페이지오픈상태: !state.센터상세페이지오픈상태 })),
+  // 센터상세페이지열기: (value) => {
+  //   gsap.to("#centerDetail", {
+  //     duration: 0.5,
+  //     width: '100%',
+  //     //   padding: 32,
+  //     ease: "power4.out",
+  //     onComplete: () => {
+  //       set((state) => ({ 센터상세페이지오픈상태: true }));
+  //     },
+  //   });
+  // },
   센터상세페이지열기: (value) => {
-    gsap.to("#centerDetail", {
-      duration: 0.5,
-      width: 320,
-      //   padding: 32,
-      ease: "power4.out",
-      onComplete: () => {
-        set((state) => ({ 센터상세페이지오픈상태: true }));
-      },
-    });
+    if (typeof window !== 'undefined') { // 클라이언트 측에서만 실행
+      const targetWidth = window.innerWidth >= 1024 ? '320px' : '100%';
+  
+      gsap.to("#centerDetail", {
+        duration: 0.5,
+        display: 'block',
+        width: targetWidth,
+        ease: "power4.out",
+        onComplete: () => {
+          set((state) => ({ 센터상세페이지오픈상태: true }));
+        },
+      });
+    }
   },
+  
 
   센터상세페이지닫기: (value) => {
     gsap.to("#centerDetail", {
       duration: 0.5,
-      width: 0,
+      // width: 0,
+      display: 'none',
       ease: "power4.out",
       onComplete: () => {
         set((state) => ({ 센터상세페이지오픈상태: false }));
@@ -59,4 +71,9 @@ export const useStore = create((set) => ({
 
   선택된프로그램 : null,
   프로그램선택 : (value) => set((state) => ({ 선택된프로그램: value })),
+
+  //모바일 메뉴 여닫기
+  모바일메뉴오픈상태: false,
+  모바일메뉴오픈상태_변경: (value) => set((state) => ({ 모바일메뉴오픈상태: !state.모바일메뉴오픈상태 })),
+  모바일메뉴닫기 : (value) => set((state) => ({ 모바일메뉴오픈상태: false })),
 }));

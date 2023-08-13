@@ -28,8 +28,8 @@ export default function CenterDetail({프로그램목록}) {
 
 
   return (
-    <section id="centerDetail" className={`${센터상세페이지오픈상태 === false ? "w-0" : "w-80"} border-r   overflow-x-hidden drop-shadow-sm `}>
-      <div className="flex flex-col gap-8 p-6 w-80 font-NanumSquareRound ">
+    <section id="centerDetail" className={`${센터상세페이지오픈상태 === false ? "hidden" : "block"} border-r w-full xl:w-80 h-screen bg-white overflow-x-hidden drop-shadow-sm `}>
+      <div className="flex flex-col w-full gap-8 p-6 xl:w-80 font-NanumSquareRound ">
         <div className="flex items-center justify-between gap-2 ">
           <h1 className="text-lg font-bold translate-y-[1px] font-Pretendard">{센터상세데이터.title}</h1>
           <button type="button"
