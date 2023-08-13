@@ -66,8 +66,14 @@ export const useStore = create((set) => ({
 
   //program page.jsx 프로그램 상세 모달창 상태
   모달창오픈상태 : false,
-  모달창열기 : (value) => set((state) => ({ 모달창오픈상태: true })),
-  모달창닫기 : (value) => set((state) => ({ 모달창오픈상태: false })),
+  모달창열기: () => {
+    document.body.classList.add('modal-open');
+    set({ 모달창오픈상태: true });
+  },
+  모달창닫기: () => {
+    document.body.classList.remove('modal-open');
+    set({ 모달창오픈상태: false });
+  },
 
   선택된프로그램 : null,
   프로그램선택 : (value) => set((state) => ({ 선택된프로그램: value })),
