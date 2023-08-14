@@ -8,26 +8,11 @@ import { useEffect } from "react";
 export default function CnMap() {
   const { 선택된지역, 지역선택, 센터상세페이지닫기, 프로그램닫기 } = useStore();
 
-  function setStars() {
-    gsap.set(
-      "#star-asan, #star-nonsan, #star-taean, #star-gyerong, #star-geumsan, #star-chunan, #star-buyeo, #star-boryeong, #star-dangjin, #star-seosan, #star-yesan, #star-hongseong, #star-cheongyang, #star-seocheon, #star-gongju",
-      {
-        scale: 0,
-        transformOrigin: "50% 100%",
-      }
-    );
-  }
-
   function mapInteraction(region) {
     지역선택(region.id);
     센터상세페이지닫기();
     프로그램닫기();
   }
-
-  useEffect(() => {
-    // movingCloud();
-    setStars();
-  }, []);
 
   useEffect(() => {
     // 모든 .pin 요소를 가져옵니다.
