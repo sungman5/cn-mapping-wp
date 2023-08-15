@@ -11,7 +11,7 @@ const ref = useRef();
     <div>
       <Image className="mx-auto mb-8" src={"/cn-characters.svg"} width={80} height={100} alt="충남 활동진흥원 캐릭터"></Image>
 
-      <h1 className="mb-2 text-lg font-bold font-Pretendard">소개</h1>
+      <h1 className="mb-2 text-lg font-bold font-Pretendard">디디다란?</h1>
       <p className="text-sm leading-6 font-NanumSquareRound">
         디디다에 오신 것을 환영합니다.<br/><br/>
         구하기 같은 우리 그들의 바이며, 꽃 길지 노래하며 피다. 위하여, 새 청춘이 같이, 있는가? 구하지 과실이 갑 낙원을 무엇을 어디 아름답고 끓는다. 그들의 노래하며 하였으며,

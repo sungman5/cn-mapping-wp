@@ -82,7 +82,7 @@ export default function CnMap() {
   }, [선택된지역]);
 
   return (
-    <svg className="w-full" width="887" height="714" viewBox="0 0 887 714" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="w-full md:w-[546px] md:h-[440px] 2xl:w-[887px] 2xl:h-[714px]" width="887" height="714" viewBox="0 0 887 714" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="cn-map" clipPath="url(#clip0_301_37)">
         <Link href={"/region/gyerong"}>
           <g id="gyerong" onClick={(e) => mapInteraction(e.currentTarget)}>

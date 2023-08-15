@@ -7,6 +7,8 @@ import Nav from "./components/nav";
 import CenterDetail from "./components/centerDetail";
 import Header from "./components/header";
 import CnMap from "./components/mapping";
+import { gsap } from "gsap";
+import ClickInfo from "./components/clickInfo";
 
 export const metadata = {
   title: "디디다: 충청남도 청소년 시설 자원 맵",
@@ -27,7 +29,8 @@ export default async function RootLayout({ children }) {
             <CenterDetail 프로그램목록={프로그램목록} />
             <Programs 프로그램목록={프로그램목록} />
             <div className="hidden xl:flex items-center justify-center flex-1 h-[calc(100vh-6rem)] p-8 bg-white relative">
-              <div className="absolute flex gap-2 bottom-8 left-8">
+              <ClickInfo />
+              <div className="absolute flex gap-2 bottom-8 right-8">
                 <div className="flex gap-4 px-6 py-4 bg-white rounded-full shadow-sm ">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path
