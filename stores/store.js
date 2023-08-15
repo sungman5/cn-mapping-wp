@@ -15,17 +15,7 @@ export const useStore = create((set) => ({
   //센터 상세페이지 여닫기
   센터상세페이지오픈상태: false,
   센터상세페이지오픈상태_변경: (value) => set((state) => ({ 센터상세페이지오픈상태: !state.센터상세페이지오픈상태 })),
-  // 센터상세페이지열기: (value) => {
-  //   gsap.to("#centerDetail", {
-  //     duration: 0.5,
-  //     width: '100%',
-  //     //   padding: 32,
-  //     ease: "power4.out",
-  //     onComplete: () => {
-  //       set((state) => ({ 센터상세페이지오픈상태: true }));
-  //     },
-  //   });
-  // },
+
   센터상세페이지열기: (value) => {
     if (typeof window !== 'undefined') { // 클라이언트 측에서만 실행
       const targetWidth = window.innerWidth >= 1024 ? '320px' : '100%';

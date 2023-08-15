@@ -1,6 +1,5 @@
 import RegionNameBtn from "@/app/components/regionName";
 import GetAllRegionName from "@/app/lib/getAllRegionName";
-import Image from "next/image";
 
 export default async function RegionLayout(props) {
   const 지역이름목록 = await GetAllRegionName();
