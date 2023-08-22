@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ProgramModal() {
   const { 모달창오픈상태, 모달창닫기, 선택된프로그램 } = useStore();
-  console.log("프로그램모달", 선택된프로그램);
+  // console.log("프로그램모달", 선택된프로그램);
   return (
     <div id="program-modal-dimmed" className={`${모달창오픈상태 === false ? "hidden" : "flex"} z-50 fixed inset-0 items-center justify-center shadow-md bg-black/50`}>
       <div id="program-modal-frame" className="relative flex flex-col justify-between w-10/12 overflow-y-auto bg-white rounded-md h-3/4 lg:p-8 lg:max-w-3xl lg:h-4/5">
