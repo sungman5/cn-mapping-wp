@@ -9,7 +9,7 @@ const ref = useRef();
   
   return (
     <div>
-      <Image className="mx-auto mb-8" src={"/cn-characters.svg"} width={80} height={100} alt="충남 활동진흥원 캐릭터"></Image>
+      <Image className="mx-auto mb-8" src={"/cn-pass-logo.svg"} width={80} height={100} alt="충남 활동진흥원 캐릭터"></Image>
 
       <h1 className="mb-2 text-lg font-bold font-Pretendard">디디다란?</h1>
       <p className="text-sm leading-6 font-NanumSquareRound">
