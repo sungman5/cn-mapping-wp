@@ -15,7 +15,10 @@ export default function ProgramModal() {
           </header>
           <div id="program-modal-body" className="mb-8">
             <div className="flex flex-col gap-6 mb-6 lg:flex-row">
-              <Image src={선택된프로그램.poster_url} width={384} height={216} alt="프로그램 이미지" className="rounded-md" />
+              {
+                선택된프로그램.poster_url === '' ? <Image src={'/cn-program-poster.png'} width={384} height={216} alt="프로그램 이미지" className="rounded-md" /> : <Image src={선택된프로그램.poster_url} width={384} height={216} alt="프로그램 이미지" className="rounded-md" />
+              }
+              
               <div className="flex flex-col gap-2 text-sm lg:gap-6 lg:text-base">
                 <div className="flex items-center gap-2 ">
                   <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">주관</h5>
