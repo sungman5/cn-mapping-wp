@@ -21,35 +21,35 @@ export default function ProgramModal() {
               
               <div className="flex flex-col gap-2 text-sm lg:gap-6 lg:text-base">
                 <div className="flex items-center gap-2 ">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">주관</h5>
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">주관</h5>
                   <p>{선택된프로그램.center_info.center_title}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">대상</h5>
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">대상</h5>
                   <p>{선택된프로그램.program_metadata.program_target}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">수용인원</h5>
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">수용인원</h5>
                   <p>{선택된프로그램.program_metadata.program_capacity}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">운영시기</h5>
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">운영시기</h5>
                   <p>{선택된프로그램.program_metadata.program_period}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">운영회기</h5>
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">운영회기</h5>
                   <p>{선택된프로그램.program_metadata.program_session}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">참가비용</h5>
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">참가비용</h5>
                   <p>{선택된프로그램.program_metadata.program_price}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">운영장소</h5>
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">운영장소</h5>
                   <p>{선택된프로그램.program_metadata.program_place}</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded bg-primary/5 border-primary text-primary font-Pretendard w-fit">문의</h5>
+                <div className="flex items-start gap-2">
+                  <h5 className="px-1.5 py-0.5 text-sm font-semibold border rounded border-primary text-primary font-Pretendard w-fit">문의</h5>
                   <div>
                     <p>{선택된프로그램.center_info.center_email}</p>
                     <p>{선택된프로그램.center_info.center_tel}</p>

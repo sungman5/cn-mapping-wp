@@ -11,9 +11,9 @@ export default function Programs({ 프로그램목록 }) {
 
   return (
     <>
-      <section className={`${프로그램창오픈상태 === false ? "hidden" : "block"} p-6 w-80 border-r border-slate-200 shadow-md`}>
-        <div>
-          <div className="flex items-center justify-between mb-6">
+      <section className={`${프로그램창오픈상태 === false ? "hidden" : "block"} p-6 w-80 border-r bg-white h-screen overflow-y-auto border-slate-200 shadow-md`}>
+        <div className="relative">
+          <div className="sticky top-0 left-0 right-0 flex items-center justify-between mb-6 bg-white">
             <h1 className="text-lg font-bold font-Pretendard">프로그램</h1>
             <button
               type="button"
